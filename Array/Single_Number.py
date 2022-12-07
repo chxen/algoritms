@@ -4,7 +4,10 @@ You must implement a solution with a linear runtime complexity and use only cons
 Input: nums = [2,2,1]
 Output: 1"""
 
-def singleNum(arr: list[int]) -> int:
-    ans = list[0]
-    for i in range(1, len(arr)):
-        if arr[i-1] == arr[i]:
+def singleNum(num: list[int]) -> int:
+    ans = 0
+    for n in num:
+        ans = n ^ ans
+    return ans
+
+print(singleNum([2,2,1,1,5]))
