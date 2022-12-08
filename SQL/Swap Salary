@@ -1,0 +1,2 @@
+SELECT id, name, if(sex = "f", "m", sex), salary
+FROM Salary;

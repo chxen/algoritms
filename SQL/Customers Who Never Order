@@ -1,0 +1,6 @@
+"""Вывести id клиентов, которые ничего не заказывали (которых нет в таблице заказов)"""
+SELECT name AS "Customers"
+FROM Customers 
+LEFT JOIN Orders ON Customers.Id = Orders.customerId
+WHERE customerId is NULL
+
